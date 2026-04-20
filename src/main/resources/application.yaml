@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: store4
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabaseTP22?createDatabaseIfNotExist=true
+    username: root
+    password: foufoufourat123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  flyway:
+    enabled: false
