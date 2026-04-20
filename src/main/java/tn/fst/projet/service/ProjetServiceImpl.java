@@ -58,16 +58,16 @@ public class ProjetServiceImpl implements ProjetService {
 
     @Override
     public List<Projet> getProjetsByTechnologie(String tech) {
-        return projetRepository.findByProjetDetailTechnologieContains(tech);
+        return projetRepository.findByTechnologie(tech);
     }
 
     @Override
     public List<Projet> getProjetsByEquipe(Integer equipeId) {
-        return projetRepository.findByEquipesId(equipeId);
+        return projetRepository.findByEquipeId(equipeId);
     }
 
     @Override
     public List<Projet> getProjetsByEquipeWithDescription(Integer equipeId) {
-        return projetRepository.findByEquipesIdAndProjetDetailDescriptionNotNull(equipeId);
+        return projetRepository.findByEquipeIdWithDescription(equipeId);
     }
 }
